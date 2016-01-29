@@ -1,0 +1,45 @@
+#default: &default
+#  adapter: postgresql
+#  encoding: unicode
+#  # For details on connection pooling, see rails configuration guide
+#  # http://guides.rubyonrails.org/configuring.html#database-pooling
+#  pool: 5
+
+#development:
+#  <<: *default
+#  database: cadastra_me_development
+#  username: postgres
+#  password: samuel
+#test:
+#  <<: *default
+#  database: cadastra_me_test
+
+#
+#   production:
+#     url: <%# ENV['DATABASE_URL'] %>
+#
+#production:
+#  <<: *default
+#  database: cadastra_me_production
+#  username: cadastra_me
+#  password: <%# ENV['CADASTRA_ME_DATABASE_PASSWORD'] %>
+#
+
+development:
+  adapter:  postgresql
+  host:     localhost
+  encoding: unicode
+  database: cadastra_me_development
+  pool:     5
+  username: postgres
+  password: samuel
+
+test:
+  host: localhost
+  adapter:  postgresql
+  host:     localhost
+  encoding: unicode
+  database: cadastra_me_test
+  pool:     5
+  username: postgres
+  password: samuel
