@@ -1,25 +1,12 @@
-<%= form_for(@cell) do |f| %>
-  <% if @cell.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@cell.errors.count, "error") %> prohibited this cell from being saved:</h2>
+<%= simple_form_for(@cell) do |f| %>
+  <%= f.error_notification %>
 
-      <ul>
-      <% @cell.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+  <div class="form-inputs">
+    <%= f.input :name %>
+    <%= f.input :leader %>
+  </div>
 
-  <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :leader %><br>
-    <%= f.text_field :leader %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
+  <div class="form-actions">
+    <%= f.button :submit %>
   </div>
 <% end %>
